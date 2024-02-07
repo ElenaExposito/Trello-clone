@@ -1,9 +1,10 @@
 import './App.css'
+import TrelloList from './components/TrelloList';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Prueba</h1>
+      <TrelloList/>
     </div>
   )
 }
