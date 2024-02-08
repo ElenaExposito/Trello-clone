@@ -1,8 +1,9 @@
+import '../App.css'
 
 const AddCardOrList = () => {
   return (
     <div>
-      <h1>Add Card</h1>
+      <h2>Add Card</h2>
     </div>
   )
 }
