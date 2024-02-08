@@ -7,7 +7,11 @@ const TrelloList = () => {
   return (
     <div className="card">
       <ListTitle/>
-      <TrelloCard/>
+      <div className="trellocard-cards">
+        <TrelloCard/>
+        <TrelloCard/>
+        <TrelloCard/>
+      </div>
       <AddCardOrList/>
     </div>
   )

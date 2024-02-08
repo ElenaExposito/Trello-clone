@@ -9,6 +9,12 @@
     gap: 1rem;
 }
 
+.trellocard-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
 /* ListTitle.jsx component */
 .list-title {
     display: flex;
@@ -41,7 +47,7 @@
     align-items: center;
     background-color: #ffffff;
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.8rem;
 }
 
 .card-title-text {
@@ -62,17 +68,14 @@
     align-items: center;
     gap: 0.5rem;
     border-radius: 0.5rem;
-    padding: 5px;
+    padding: 0.5rem;
 }
 
 .add-title:hover {
     background-color: var(--icon-hover);
 }
 
-.add-icon {
-    color: var(--text-shadow);
-}
-
 .add-title-text {
+    color: var(--text-shadow);
     font-size: 1.2rem;
 }
