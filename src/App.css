@@ -1,8 +1,13 @@
 :root {
-    --grey-color: #ebecf0;
+    --grey-color: #eaecf1;
+    --text-color: #050B15;
 }
 
 body {
     height: 100vh;
     background: linear-gradient(135deg, #0e244d, #8a376c);
+}
+
+.App {
+    padding: 1rem;
 }
