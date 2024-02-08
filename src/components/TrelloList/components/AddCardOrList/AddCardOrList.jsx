@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import AddCardOrListText from "../AddCardOrListText/AddCardOrListText";
+import AddCardOrListText from "./components/AddCardOrListText/AddCardOrListText";
 import "./AddCardOrList.css";
 
 const AddCardOrList = () => {
