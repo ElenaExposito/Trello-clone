@@ -1,5 +1,5 @@
 import './App.css'
-import TrelloList from './components/TrelloList';
+import TrelloList from './components/TrelloList/TrelloList';
 
 function App() {
   return (

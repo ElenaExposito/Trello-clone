@@ -1,3 +1,4 @@
+import "./TrelloCard.css";
 
 const TrelloCard = () => {
   return (

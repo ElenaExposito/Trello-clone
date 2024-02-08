@@ -1,0 +1,22 @@
+.list-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-title-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.list-icon {
+    all: initial;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.list-icon:hover {
+    background-color: var(--icon-hover);
+}

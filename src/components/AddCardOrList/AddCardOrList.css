@@ -1,0 +1,26 @@
+.add-title-open {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.add-title-closed {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.add-title-closed:hover {
+    background-color: var(--icon-hover);
+}
+
+.add-title-text {
+    color: var(--text-shadow);
+    font-size: 1.2rem;
+}

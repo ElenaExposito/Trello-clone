@@ -1,3 +1,5 @@
+import "./ListTitle.css";
+
 const ListTitle = () => {
   return (
     <div className="list-title">
