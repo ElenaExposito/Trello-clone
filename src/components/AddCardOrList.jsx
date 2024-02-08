@@ -10,8 +10,8 @@ const AddCardOrList = () => {
   };
 
   return (
-    <div className={isOpen ? 'add-title-closed' : 'add-title-open'} onClick={handleClick}>
-      {isOpen ? null : (
+    <div className={isOpen ? 'add-title-open' : 'add-title-closed'} onClick={handleClick}>
+      {isOpen ? <AddCardOrListText /> : (
         <>
           <span className='add-icon'>
             <svg width="15" height="15" viewBox="0 0 24 24" style={{ fill: 'var(--text-shadow)' }}>
@@ -19,11 +19,10 @@ const AddCardOrList = () => {
             </svg>
           </span>
           <h2 className='add-title-text'>
-            {isOpen ? 'Add card' : 'Add list'}
+            {'Add list'}
           </h2>
         </>
       )}
-      {isOpen && <AddCardOrListText />}
     </div>
   );
 }
