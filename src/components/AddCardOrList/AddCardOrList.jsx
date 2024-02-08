@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../App.css'
-import AddCardOrListText from "./AddCardOrListText";
+import AddCardOrListText from "../AddCardOrListText/AddCardOrListText";
 
 const AddCardOrList = () => {
   const [isOpen, setIsOpen] = useState(false);

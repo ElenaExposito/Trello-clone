@@ -1,6 +1,6 @@
-import AddCardOrList from "./AddCardOrList"
-import ListTitle from "./ListTitle"
-import TrelloCard from "./TrelloCard"
+import AddCardOrList from "../AddCardOrList/AddCardOrList"
+import ListTitle from "../ListTitle/ListTitle"
+import TrelloCard from "../TrelloCard/TrelloCard"
 import './TrelloList.css';
 
 const TrelloList = () => {
