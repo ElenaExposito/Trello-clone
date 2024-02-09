@@ -1,0 +1,16 @@
+.add-card-or-list-title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.add-card-or-list-title-textarea {
+    font-size: 1.2rem;
+    background-color: var(--background-white);
+    border-radius: 0.5rem;
+    min-height: 6rem;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
