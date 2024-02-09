@@ -14,3 +14,26 @@
     box-sizing: border-box;
     resize: none;
 }
+
+.add-card-or-list-buttons {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    gap: 0.5rem;
+}
+
+.add-card-or-list-button:hover, .list-icon:hover {
+    cursor: pointer;
+}
+
+.add-card-or-list-button {
+    font-size: 1rem;
+    background-color: var(--background-blue);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+.add-card-or-list-button:hover {
+    background-color: var(--background-blue-hover);
+}

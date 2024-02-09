@@ -7,6 +7,10 @@
     padding: 0.5rem 0.5rem 0.5rem 0.8rem;
 }
 
+.card-title:hover {
+    cursor: pointer;
+}
+
 .card-title-text {
     font-size: 1.2rem;
     color: var(--text-color);
@@ -21,4 +25,5 @@
 
 .edit-icon:hover {
     background-color: var(--icon-hover);
+    cursor: pointer;
 }

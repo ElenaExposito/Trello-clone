@@ -4,6 +4,8 @@
     --text-shadow: #5D5E5F;
     --icon-hover: #D9D9D9;
     --background-white: #ffffff;
+    --background-blue: #579dff;
+    --background-blue-hover: #85b8ff;
 }
 
 body {
