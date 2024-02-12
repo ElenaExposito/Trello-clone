@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AddCardOrListText from "./components/AddCardOrListText/AddCardOrListText";
 import "./AddCardOrList.css";
 
-const AddCardOrList = () => {
+const AddCardOrList = ({type}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -10,8 +10,11 @@ const AddCardOrList = () => {
   };
 
   return (
-    <div className={isOpen ? 'add-title-open' : 'add-title-closed'} onClick={handleClick}>
-      {isOpen ? <AddCardOrListText onClick={(e) => e.stopPropagation()} /> : (
+    <div
+      className={isOpen ? 'add-title-open' : 'add-title-closed'}
+      onClick={handleClick}
+    >
+      {isOpen ? <AddCardOrListText type={type} onClick={(e) => e.stopPropagation()} /> : (
         <>
           <span className='add-icon'>
             <svg width="15" height="15" viewBox="0 0 24 24" style={{ fill: 'var(--text-shadow)' }}>
@@ -19,7 +22,7 @@ const AddCardOrList = () => {
             </svg>
           </span>
           <h2 className='add-title-text'>
-            {'Add list'}
+            {type === "card" ? "Add a card" : "Add another list"}
           </h2>
         </>
       )}
@@ -27,4 +30,5 @@ const AddCardOrList = () => {
   );
 }
 
-export default AddCardOrList
+export default AddCardOrList;
+

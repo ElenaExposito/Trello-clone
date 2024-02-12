@@ -1,7 +1,7 @@
 import "./AddCardOrListText.css";
 import { useState } from 'react';
 
-const AddCardOrListText = () => {
+const AddCardOrListText = ({type}) => {
   const [title, setTitle] = useState('');
 
   const handleTitleChange = (e) => {
@@ -24,7 +24,9 @@ const AddCardOrListText = () => {
         <textarea
           className="add-card-or-list-title-textarea"
           type="text"
-          placeholder="Enter a title for this card..."
+          placeholder={
+            type === "card" ? "Enter a title for this card..." : "Enter list title..."
+          }
           value={title}
           onChange={handleTitleChange}
           onClick={(e) => e.stopPropagation()}
