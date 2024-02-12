@@ -11,7 +11,7 @@ const AddCardOrList = () => {
 
   return (
     <div className={isOpen ? 'add-title-open' : 'add-title-closed'} onClick={handleClick}>
-      {isOpen ? <AddCardOrListText /> : (
+      {isOpen ? <AddCardOrListText onClick={(e) => e.stopPropagation()} /> : (
         <>
           <span className='add-icon'>
             <svg width="15" height="15" viewBox="0 0 24 24" style={{ fill: 'var(--text-shadow)' }}>
