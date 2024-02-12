@@ -5,6 +5,9 @@ function App() {
   return (
     <div className='App'>
       <TrelloList/>
+      <TrelloList/>
+      <TrelloList/>
+      <TrelloList/>
     </div>
   )
 }
