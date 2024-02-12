@@ -10,10 +10,16 @@
     min-width: 18rem;
 }
 
+.add-title-button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+}
+
 .add-title-closed {
     display: flex;
     align-items: flex-start;
-    gap: 0.5rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
     height: 100%;
