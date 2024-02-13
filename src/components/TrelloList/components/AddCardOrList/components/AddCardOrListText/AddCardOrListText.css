@@ -15,6 +15,10 @@
     resize: none;
 }
 
+.add-card-or-list-title-textarea:focus {
+    outline: 2px solid dodgerblue;
+}
+
 .add-card-or-list-buttons {
     display: flex;
     align-items: center;

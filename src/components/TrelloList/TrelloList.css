@@ -1,6 +1,6 @@
 .card {
     background-color: var(--grey-color);
-    min-width: 18rem;
+    width: 19rem;
     padding: 0.5rem;
     border-radius: 0.25rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
