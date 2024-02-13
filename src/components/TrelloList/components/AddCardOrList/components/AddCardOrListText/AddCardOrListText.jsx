@@ -1,5 +1,5 @@
 import "./AddCardOrListText.css";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {string, func} from 'prop-types'
 
 const AddCardOrListText = ({type, onClose}) => {
@@ -13,6 +13,19 @@ const AddCardOrListText = ({type, onClose}) => {
     // Lógica para añadir tarjeta
     console.log('Añadir Tarjeta:', title);
   };
+
+  useEffect(() => {
+    const handleBlur = () => {
+      onClose();
+    };
+
+    const textarea = document.querySelector('.add-card-or-list-title-textarea');
+    textarea.addEventListener('blur', handleBlur);
+
+    return () => {
+      textarea.removeEventListener('blur', handleBlur);
+    };
+  }, [onClose]);
 
   return (
     <div className="add-card-or-list-title">

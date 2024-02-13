@@ -10,11 +10,15 @@ const AddCardOrList = ({type}) => {
     setIsOpen(true);
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div
       className={isOpen ? 'add-title-open' : 'add-title-closed'}
     >
-      {isOpen ? <AddCardOrListText type={type} onClose={() => {setIsOpen(false)}}  /> : (
+      {isOpen ? <AddCardOrListText type={type} onClose={handleClose}  /> : (
         <div className="add-title-button" onClick={handleOpen}>
           <span className='add-icon'>
             <svg width="15" height="15" viewBox="0 0 24 24" style={{ fill: 'var(--text-shadow)' }}>
