@@ -1,3 +1,4 @@
+import {string} from 'prop-types'
 import { useState } from 'react';
 import AddCardOrListText from "./components/AddCardOrListText/AddCardOrListText";
 import "./AddCardOrList.css";
@@ -27,6 +28,10 @@ const AddCardOrList = ({type}) => {
       )}
     </div>
   );
+}
+
+AddCardOrList.propTypes = {
+  type: string.isRequired
 }
 
 export default AddCardOrList;
