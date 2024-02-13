@@ -11,6 +11,12 @@
     max-height: 95vh;
 }
 
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
 .trellocard-cards {
     display: flex;
     flex-direction: column;

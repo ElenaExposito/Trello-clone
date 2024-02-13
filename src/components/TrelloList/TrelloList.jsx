@@ -3,17 +3,20 @@ import ListTitle from "./components/ListTitle/ListTitle"
 import TrelloCard from "./components/TrelloCard/TrelloCard"
 import './TrelloList.css';
 
-const TrelloList = () => {
+const TrelloList = ({list}) => {
   return (
     <div className="card">
       <ListTitle/>
-      <div className="trellocard-cards">
-        <TrelloCard/>
-        <TrelloCard/>
-        <TrelloCard/>
-        <TrelloCard/>
+      <div className="cards">
+        <div className="trellocard-cards">
+          {
+            list.cards.map(card => (
+              <TrelloCard card={card} key ={card.id}/>
+            ))
+          }
+        </div>
+        <AddCardOrList type="card"/>
       </div>
-      <AddCardOrList type="card"/>
     </div>
   )
 }
