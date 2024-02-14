@@ -1,4 +1,5 @@
 import "./TrelloCard.css";
+import { string } from 'prop-types';
 
 const TrelloCard = ({card}) => {
   return (
@@ -12,5 +13,11 @@ const TrelloCard = ({card}) => {
     </div>
   )
 }
+
+TrelloCard.propTypes = {
+  card: {
+    title: string.isRequired,
+  }
+};
 
 export default TrelloCard
