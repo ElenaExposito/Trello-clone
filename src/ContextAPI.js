@@ -1,4 +1,4 @@
-import {createContext} from 'React';
+import {createContext} from 'react';
 
 const ContextAPI = createContext(null);
 
