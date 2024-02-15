@@ -3,7 +3,7 @@ import { useState } from 'react';
 import AddCardOrListText from "./components/AddCardOrListText/AddCardOrListText";
 import "./AddCardOrList.css";
 
-const AddCardOrList = ({type}) => {
+const AddCardOrList = ({type, listId}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -14,7 +14,7 @@ const AddCardOrList = ({type}) => {
     <div
       className={isOpen ? 'add-title-open' : 'add-title-closed'}
     >
-      {isOpen ? <AddCardOrListText type={type} onClose={() => {setIsOpen(false)}}  /> : (
+      {isOpen ? <AddCardOrListText type={type} onClose={() => {setIsOpen(false)}} listId={listId} /> : (
         <div className="add-title-button" onClick={handleOpen}>
           <span className='add-icon'>
             <svg width="15" height="15" viewBox="0 0 24 24" style={{ fill: 'var(--text-shadow)' }}>

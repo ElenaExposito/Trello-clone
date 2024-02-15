@@ -1,31 +1,25 @@
 import "./AddCardOrListText.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import {string, func} from 'prop-types'
+import ContextAPI from "../../../../../../ContextAPI";
 
-const AddCardOrListText = ({type, onClose}) => {
+const AddCardOrListText = ({type, onClose, listId}) => {
   const [title, setTitle] = useState('');
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
+  const {addCard, addList} =useContext(ContextAPI);
 
-  const handleAddCard = () => {
-    // Lógica para añadir tarjeta
-    console.log('Añadir Tarjeta:', title);
+  const handleAddCardorList = () => {
+    if (type === "card") {
+      addCard(title, listId)
+    } else {
+      addList(title)
+    }
+    setTitle("");
+    onClose()
   };
-
-  useEffect(() => {
-    const handleBlur = () => {
-      onClose();
-    };
-
-    const textarea = document.querySelector('.add-card-or-list-title-textarea');
-    textarea.addEventListener('blur', handleBlur);
-
-    return () => {
-      textarea.removeEventListener('blur', handleBlur);
-    };
-  }, [onClose]);
 
   return (
     <div className="add-card-or-list-title">
@@ -41,7 +35,7 @@ const AddCardOrListText = ({type, onClose}) => {
         ></textarea>
       </label>
       <div className="add-card-or-list-buttons">
-        <button className="add-card-or-list-button" onClick={handleAddCard}>
+        <button className="add-card-or-list-button" onClick={handleAddCardorList}>
           {type === "card" ? "Add card" : "Add list"}
         </button>
         <button className="list-icon" onClick={onClose}>

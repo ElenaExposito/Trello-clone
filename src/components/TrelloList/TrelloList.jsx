@@ -16,7 +16,7 @@ const TrelloList = ({list}) => {
             ))
           }
         </div>
-        <AddCardOrList type="card"/>
+        <AddCardOrList type="card" listId={list.id}/>
       </div>
     </div>
   )

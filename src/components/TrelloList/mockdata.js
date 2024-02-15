@@ -1,5 +1,5 @@
 const mockData = {
-    list: {
+    lists: {
         "01list": {
             id: "01list",
             title: "To do",
