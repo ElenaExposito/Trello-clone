@@ -31,7 +31,8 @@ const AddCardOrList = ({type, listId}) => {
 }
 
 AddCardOrList.propTypes = {
-  type: string.isRequired
+  type: string.isRequired,
+  listId: string.isRequired,
 }
 
 export default AddCardOrList;

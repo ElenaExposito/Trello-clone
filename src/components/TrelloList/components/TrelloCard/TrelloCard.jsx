@@ -1,5 +1,5 @@
 import "./TrelloCard.css";
-import { string } from 'prop-types';
+import { string, shape } from 'prop-types';
 
 const TrelloCard = ({card}) => {
   return (
@@ -15,9 +15,9 @@ const TrelloCard = ({card}) => {
 }
 
 TrelloCard.propTypes = {
-  card: {
+  card: shape({
     title: string.isRequired,
-  }
+  }).isRequired,
 };
 
 export default TrelloCard

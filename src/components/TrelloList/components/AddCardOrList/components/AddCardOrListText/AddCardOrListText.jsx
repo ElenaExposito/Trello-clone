@@ -50,7 +50,8 @@ const AddCardOrListText = ({type, onClose, listId}) => {
 
 AddCardOrListText.propTypes = {
   type: string.isRequired,
-  onClose: func.isRequired
+  onClose: func.isRequired,
+  listId: string.isRequired
 }
 
 export default AddCardOrListText
