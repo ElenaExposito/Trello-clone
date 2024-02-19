@@ -3,7 +3,7 @@ import AddCardOrList from './components/AddCardOrList/AddCardOrList'
 import ListTitle from './components/ListTitle/ListTitle'
 import TrelloCard from './components/TrelloCard/TrelloCard'
 import './TrelloList.css'
-import { Draggable } from 'react-beautiful-dnd'
+import { Draggable, Droppable } from 'react-beautiful-dnd'
 
 const TrelloList = ({ list, index: listIndex }) => {
   return (
@@ -16,14 +16,22 @@ const TrelloList = ({ list, index: listIndex }) => {
           {...provided.dragHandleProps}
         >
           <ListTitle title={list.title} listId={list.id} />
-          <div className="cards">
-            <div className="trellocard-cards">
-              {list.cards.map((card, index) => (
-                <TrelloCard card={card} key={card.id} index={index} />
-              ))}
-            </div>
-            <AddCardOrList type="card" listId={list.id} />
-          </div>
+          <Droppable droppableId={list.id} type="card">
+            {(dropProvided) => (
+              <div
+                className="cards"
+                ref={dropProvided.innerRef}
+                {...dropProvided.droppableProps}
+              >
+                <div className="trellocard-cards">
+                  {list.cards.map((card, index) => (
+                    <TrelloCard card={card} key={card.id} index={index} />
+                  ))}
+                </div>
+                <AddCardOrList type="card" listId={list.id} />
+              </div>
+            )}
+          </Droppable>
         </div>
       )}
     </Draggable>

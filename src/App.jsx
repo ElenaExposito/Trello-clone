@@ -54,7 +54,55 @@ function App() {
     })
   }
 
-  const onDragEnd = () => {}
+  const onDragEnd = (result) => {
+    const {
+      destination,
+      destination: { droppableId: destdroppableId, index: destIndex },
+      source: { droppableId: sourcedroppableId, index: sourceIndex },
+      draggableId,
+      type,
+    } = result
+
+    if (!destination) {
+      return
+    }
+
+    if (type === 'list') {
+      const newListIds = data.listIds
+      newListIds.splice(sourceIndex, 1)
+      newListIds.splice(destIndex, 0, draggableId)
+      return
+    }
+
+    const sourceList = data.lists[sourcedroppableId]
+    const destinationList = data.lists[destdroppableId]
+    const draggingCard = sourceList.cards.filter(
+      (card) => card.id === draggableId
+    )[0]
+
+    if (sourcedroppableId === destdroppableId) {
+      destinationList.cards.splice(sourceIndex, 1)
+      destinationList.cards.splice(destIndex, 0, draggingCard)
+      setData({
+        ...data,
+        lists: {
+          ...data.lists,
+          [sourceList.id]: destinationList,
+        },
+      })
+    } else {
+      sourceList.cards.splice(sourceIndex, 1)
+      destinationList.cards.splice(destIndex, 0, draggingCard)
+      setData({
+        ...data,
+        lists: {
+          ...data.lists,
+          [sourceList.id]: sourceList,
+          [destinationList.id]: destinationList,
+        },
+      })
+    }
+  }
 
   return (
     <ContextAPI.Provider value={{ updateListTitle, addCard, addList }}>
@@ -70,8 +118,8 @@ function App() {
                 const list = data.lists[listID]
                 return <TrelloList list={list} key={listID} index={index} />
               })}
-              <AddCardOrList type="list" />
               {provided.placeholder}
+              <AddCardOrList type="list" />
             </div>
           )}
         </Droppable>
