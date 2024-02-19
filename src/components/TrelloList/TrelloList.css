@@ -1,25 +1,38 @@
+.card-wrapper {
+  width: 19rem;
+  height: 100%;
+  max-height: 95vh;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .card {
-    background-color: var(--grey-color);
-    width: 19rem;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: 100%;
-    max-height: 95vh;
+  border-radius: 0.25rem;
+  background-color: var(--grey-color);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .trellocard-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  max-height: 97%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.has-scroll {
+  padding-right: 0.5rem;
 }

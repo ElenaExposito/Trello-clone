@@ -1,29 +1,30 @@
 .card-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background-white);
-    border-radius: 0.5rem;
-    padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-white);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+  width: 100%;
 }
 
 .card-title:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .card-title-text {
-    font-size: 1.2rem;
-    color: var(--text-color);
+  font-size: 1.2rem;
+  color: var(--text-color);
 }
 
 .edit-icon {
-    all: initial;
-    border-radius: 50%;
-    background-color: transparent;
-    padding: 5px;
+  all: initial;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 5px;
 }
 
 .edit-icon:hover {
-    background-color: var(--icon-hover);
-    cursor: pointer;
+  background-color: var(--icon-hover);
+  cursor: pointer;
 }
