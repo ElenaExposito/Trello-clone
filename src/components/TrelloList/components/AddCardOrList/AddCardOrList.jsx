@@ -11,32 +11,34 @@ const AddCardOrList = ({ type, listId }) => {
   }
 
   return (
-    <div className={isOpen ? 'add-title-open' : 'add-title-closed'}>
-      {isOpen ? (
-        <AddCardOrListText
-          type={type}
-          onClose={() => {
-            setIsOpen(false)
-          }}
-          listId={listId}
-        />
-      ) : (
-        <div className="add-title-button" onClick={handleOpen}>
-          <span className="add-icon">
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              style={{ fill: 'var(--text-shadow)' }}
-            >
-              <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-            </svg>
-          </span>
-          <h2 className="add-title-text">
-            {type === 'card' ? 'Add a card' : 'Add another list'}
-          </h2>
-        </div>
-      )}
+    <div className="wrapper">
+      <div className={isOpen ? 'add-title-open' : 'add-title-closed'}>
+        {isOpen ? (
+          <AddCardOrListText
+            type={type}
+            onClose={() => {
+              setIsOpen(false)
+            }}
+            listId={listId}
+          />
+        ) : (
+          <div className="add-title-button" onClick={handleOpen}>
+            <span className="add-icon">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                style={{ fill: 'var(--text-shadow)' }}
+              >
+                <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+              </svg>
+            </span>
+            <h2 className="add-title-text">
+              {type === 'card' ? 'Add a card' : 'Add another list'}
+            </h2>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

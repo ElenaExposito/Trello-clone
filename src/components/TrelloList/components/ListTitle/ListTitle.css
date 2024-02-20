@@ -1,36 +1,39 @@
 .list-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+  flex-basis: 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
 .list-title:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .list-title-text {
-    all: unset;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--text-color);
-    max-width: 15.8rem;
+  all: unset;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  max-width: 15.8rem;
 }
 
 .list-title-text:focus {
-    background-color: var(--background-white);
-    border-radius: 0.2rem;
-    border: 2px solid dodgerblue;
-    padding: 0 0.2rem;
-    max-width: 15.4rem;
+  background-color: var(--background-white);
+  border-radius: 0.2rem;
+  border: 2px solid dodgerblue;
+  padding: 0 0.2rem;
+  max-width: 15.4rem;
 }
 
 .list-icon {
-    all: initial;
-    border-radius: 0.5rem;
-    background-color: transparent;
-    padding: 5px;
+  all: initial;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  padding: 5px;
 }
 
 .list-icon:hover {
-    background-color: var(--icon-hover);
+  background-color: var(--icon-hover);
 }
