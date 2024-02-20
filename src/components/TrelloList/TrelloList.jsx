@@ -27,10 +27,10 @@ const TrelloList = ({ list, index: listIndex }) => {
                   {list.cards.map((card, index) => (
                     <TrelloCard card={card} key={card.id} index={index} />
                   ))}
+                  <AddCardOrList type="card" listId={list.id} />
                 </ol>
               )}
             </Droppable>
-            <AddCardOrList type="card" listId={list.id} />
           </div>
         )}
       </Draggable>
